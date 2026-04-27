@@ -11,10 +11,11 @@
         {% for post in posts %}
         <article class="words__entry">
             <div class="words-block__heading">
-                <h4 class="words__title">{{ post['title'] }}</h4>
+                <h4 class="words__title">
+                    <a href="{{ url_for('show_post', post_id=post.id) }}">{{ post['title'] }}</a>
+                </h4>
             </div>
-            <time>{{ post.date }}</time>
-            <a href="{{ url_for('show_post', post_id=post.id) }}">Read Post</a>
+            <time class="post__date">{{ post.date }}</time>
         </article>
         {% endfor %}
     </ul>
