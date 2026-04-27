@@ -1,0 +1,13 @@
+{% extends "base.html" %} {% block content %}
+
+<section class="page__heading">
+    <h1>{{ page_title }} Page</h1>
+    <h4 class="site__tagline">{{ site_tagline }}</h4>
+</section>
+
+<section class="page__content">
+    <a href="{{ url_for('blog') }}">← Back to All Posts</a>
+    <p>{{ post.content }}</p>
+    <div class="include__nav">{% include "_main_nav.html" %}</div>
+</section>
+{% endblock %}

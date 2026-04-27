@@ -1,0 +1,26 @@
+{% extends "base.html" %} {% block content %}
+
+<section class="page__heading">
+    <h1>{{ page_title }} Page</h1>
+    <h4 class="site__tagline">{{ site_tagline }}</h4>
+</section>
+
+<section class="page__content">
+    <h3 class="books__heading">My Bookshelf</h3>
+    <ul class="books__list">
+        {% for book in books %}
+        <li class="book__item">
+            <h4 class="book__item--title">{{ book.title }}</h4>
+            <ul class="book__author">
+                <li class="book__author--details">
+                    <strong>Author:</strong> {{ book.author }} /
+                    <strong>URL:</strong>
+                    <a href="{{ book.url }}" target="_blank">Buy Now</a>
+                </li>
+            </ul>
+        </li>
+        {% endfor %}
+    </ul>
+    <div class="include__nav">{% include "_main_nav.html" %}</div>
+</section>
+{% endblock %}

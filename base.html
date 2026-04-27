@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        {% block head %}
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>{{ site_title }} : {{ site_tagline }}</title>
+        <link
+            rel="stylesheet"
+            href="{{ url_for('static', filename='css/styles.css') }}"
+        />
+        {% endblock %}
+    </head>
+
+    <body class="main__wrapper">
+        <header>
+            <div class="logo__wrapper">
+                <a
+                    href="{{ url_for('index') }}"
+                    alt="{{ site_title }}"
+                    title="{{ site_title }}"
+                    ><img
+                        class="logo"
+                        src="{{ url_for('static', filename='img/logo.svg') }}"
+                        alt="{{ site_title }}"
+                        title="{{ site_title }}"
+                /></a>
+            </div>
+        </header>
+
+        <main id="content">{% block content %}{% endblock %}</main>
+
+        <footer class="footer__wrapper">
+            <p class="footer__copyright">
+                &copy; 2026 {{ site_title }} When in Doubt, Minimize.
+            </p>
+        </footer>
+    </body>
+</html>

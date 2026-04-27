@@ -22,15 +22,6 @@ def index():
     return render_template("index.html", page_title=page_title)
 
 
-@app.route("/zen/")
-def zen():
-
-    # Page Details
-    page_title = "Zen"
-
-    return render_template("zen.html", page_title=page_title)
-
-
 @app.route("/bookshelf/")
 def bookshelf():
 
@@ -59,4 +50,4 @@ def show_post(post_id):
 
 
 if __name__ == "__main__":
-    app.run()
+    app.run(debug=True)
