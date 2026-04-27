@@ -1,0 +1,23 @@
+{% extends "base.html" %} {% block content %}
+
+<section class="page__heading">
+    <h1>{{ page_title }} Page</h1>
+    <h4 class="site__tagline">{{ site_tagline }}</h4>
+</section>
+
+<section>
+    <h3 class="words__heading">Lastest Blog Postings</h3>
+    <ul>
+        {% for post in posts %}
+        <article class="words__entry">
+            <div class="words-block__heading">
+                <h4 class="words__title">{{ post['title'] }}</h4>
+            </div>
+            <time>{{ post.date }}</time>
+            <a href="{{ url_for('show_post', post_id=post.id) }}">Read Post</a>
+        </article>
+        {% endfor %}
+    </ul>
+    <div class="include__nav">{% include "_main_nav.html" %}</div>
+</section>
+{% endblock %}

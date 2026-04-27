@@ -1,0 +1,210 @@
+/* Import Stylesheets */
+@import url("reset.css");
+
+/* Local Fonts */
+@font-face {
+    font-family: "Roboto";
+    src:
+        local("Roboto"),
+        url("../fonts/roboto.woff2") format("woff"),
+        url("../fonts/roboto-300.woff2") format("woff"),
+        url("../fonts/roboto-500.woff2") format("woff"),
+        url("../fonts/roboto-600.woff2") format("woff"),
+        url("../fonts/roboto-700.woff2") format("woff");
+
+    font-family: "Roboto-Condensed";
+    src:
+        local("Roboto-Condensed"),
+        url("../fonts/roboto-condensed.woff2") format("woff"),
+        url("../fonts/roboto-condensed-300.woff2") format("woff"),
+        url("../fonts/roboto-condensed-500.woff2") format("woff"),
+        url("../fonts/roboto-condensed-600.woff2") format("woff"),
+        url("../fonts/roboto-condensed-700.woff2") format("woff");
+}
+
+/* Root */
+:root {
+    /* Colors */
+    --fw-color--900: #2e2e2e;
+    --fw-color--500: #9e9e9e;
+
+    /* Heading Size */
+    --fw-heading--3: 3rem;
+    --fw-heading--225: 2.25rem;
+    --fw-heading--15: 1.5rem;
+    --fw-heading--125: 1.25rem;
+    --fw-heading--115: 1.15rem;
+    --fw-heading--1: 1rem;
+    --fw-heading--0925: 0.925rem;
+    --fw-heading--0825: 0.825rem;
+}
+
+/* General Styles */
+body {
+    font-family: "Roboto", sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.7em;
+    height: 100vh;
+    -webkit-font-smoothing: antialiased;
+}
+
+.page__heading {
+    border-bottom: 1px solid #e0e0e0;
+    margin-block-end: 1.5rem;
+
+    & h1 {
+        font-family: "Roboto-Condensed";
+        font-size: var(--fw-heading--15);
+        font-weight: 500;
+    }
+
+    & h4 {
+        font-size: var(--fw-heading--0925);
+        font-weight: 400;
+        color: var(--fw-color--500);
+    }
+}
+
+/* Header */
+.main {
+    padding: 1rem 1.25rem;
+}
+
+header {
+    margin-bottom: 1.5rem;
+}
+
+.logo__wrapper {
+    width: 25px;
+    height: 25px;
+
+    & .logo {
+        width: inherit;
+        height: inherit;
+    }
+}
+
+.nav__wrapper {
+    display: flex;
+    gap: 0.25rem;
+}
+
+.menu__wrapper {
+    display: flex;
+    flex-direction: column;
+    padding-inline-start: 0;
+    margin-block-start: 0;
+    margin-block-end: 0;
+    list-style: none;
+}
+
+/* Body Styles */
+.site__tagline {
+    margin-block-end: 1rem;
+}
+
+.page__content {
+    margin-block-end: 1rem;
+}
+
+/* Includes Styles */
+.include__nav {
+    margin-block-start: 3rem;
+}
+
+/* Words Styling */
+.words__entry {
+    margin-block-end: 1.5rem;
+    padding-block-end: 1.5rem;
+    border-bottom: 1px solid #e0e0e0;
+
+    &:last-child {
+        margin-block-end: 0;
+        padding-block-end: 0;
+        border-bottom: 0;
+    }
+}
+
+.words__heading {
+    margin-block-end: 1.5rem;
+    font-size: var(--fw-heading--115);
+    font-weight: 500;
+}
+
+.words__title {
+    font-size: var(--fw-heading--1);
+    font-weight: 500;
+}
+
+.words__date {
+    font-size: var(--fw-heading--0825);
+}
+
+.words__content {
+    margin-block-start: 0.5rem;
+    margin-left: 0.5rem;
+    border-left: 1px dashed #e0e0e0;
+    padding-left: 0.5rem;
+}
+
+/* Books Styling */
+.books__heading {
+    margin-block-end: 1.5rem;
+    font-family: "Roboto-Condensed";
+    font-size: var(--fw-heading--115);
+    font-weight: 500;
+}
+
+.books__list {
+    list-style: none;
+
+    & li {
+        margin-block-end: 1rem;
+        padding-block-end: 1rem;
+        border-bottom: 1px solid #e0e0e0;
+
+        &:last-child {
+            margin-block-end: 0;
+            padding-block-end: 0;
+            border-bottom: 0;
+        }
+    }
+}
+
+.book__item {
+    & .book__item--title {
+        font-size: var(--fw-heading--1);
+        font-weight: 500;
+    }
+}
+
+.book__author {
+    list-style: none;
+
+    & .book__author--details {
+        font-size: var(--fw-heading--0825);
+        color: var(--fw-color--500);
+
+        & strong {
+            color: var(--fw-color--900);
+            font-weight: 500;
+        }
+
+        & a {
+            font-weight: 500;
+            color: var(--fw-color--900);
+        }
+    }
+}
+
+/* Footer Styles */
+footer {
+    position: fixed;
+    bottom: 0;
+    margin-block-end: 1rem;
+}
+
+.footer__copyright {
+    font-size: var(--fw-heading--0925);
+}
