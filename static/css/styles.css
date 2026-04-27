@@ -67,7 +67,7 @@ body {
 }
 
 /* Header */
-.main {
+.main__container {
     padding: 1rem 1.25rem;
 }
 
@@ -114,7 +114,7 @@ header {
 }
 
 /* Words Styling */
-.words__entry {
+.blog__entry {
     margin-block-end: 1.5rem;
     padding-block-end: 1.5rem;
     border-bottom: 1px solid #e0e0e0;
@@ -126,22 +126,22 @@ header {
     }
 }
 
-.words__heading {
+.blog__heading {
     margin-block-end: 1.5rem;
     font-size: var(--fw-heading--115);
     font-weight: 500;
 }
 
-.words__title {
+.blog__title {
     font-size: var(--fw-heading--1);
     font-weight: 500;
 }
 
-.words__date {
+.blog__date {
     font-size: var(--fw-heading--0825);
 }
 
-.words__content {
+.blog__content {
     margin-block-start: 0.5rem;
     margin-left: 0.5rem;
     border-left: 1px dashed #e0e0e0;
