@@ -1,7 +1,7 @@
 Posts = [
     {
         "id": 1,
-        "title": "Snowing Like a Fucker Today!",
+        "title": "What is with All this Snow Today!",
         "content": "This is the content for this posting.",
         "date": "April 24, 2026",
     },
