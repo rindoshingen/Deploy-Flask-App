@@ -4,7 +4,7 @@ from data import Books, Posts
 
 app = Flask(__name__)
 
-site_title = "Made by Shingen"
+site_title = "Deploy Flask App"
 site_tagline = "Making Things Simple, Useful, & Impactful"
 
 
