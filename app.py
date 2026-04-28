@@ -47,7 +47,3 @@ def show_post(post_id):
     if post is None:
         abort(404)  # or return "Not found", 404
     return render_template("post.html", post=post)
-
-
-if __name__ == "__main__":
-    app.run(debug=True)
