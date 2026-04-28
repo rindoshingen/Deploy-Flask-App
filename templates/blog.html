@@ -4,16 +4,12 @@
     <h3 class="blog__heading">Lastest Blog Postings</h3>
     <ul class="blog__postings">
         {% for post in posts %}
-        <article class="blog__entry">
-            <div class="blog-block__heading">
-                <h4 class="blog__title">
-                    <a href="{{ url_for('show_post', post_id=post.id) }}"
-                        >{{ post.title }}</a
-                    >
-                </h4>
-            </div>
+        <li class="blog__entry">
+            <h4 class="blog__title">
+                <a href="{{ url_for('show_post', post_id=post.id) }}">{{ post.title }}</a>
+            </h4>
             <time class="blog__date">{{ post.date }}</time>
-        </article>
+        </li>
         {% endfor %}
     </ul>
     {% include "_main_nav.html" %}
