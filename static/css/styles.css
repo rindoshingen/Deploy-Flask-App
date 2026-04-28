@@ -71,7 +71,7 @@ body {
         font-weight: 500;
     }
 
-    & h4 {
+    & h2 {
         font-size: var(--fw-heading--0925);
         font-weight: 400;
         color: var(--fw-color--500);
