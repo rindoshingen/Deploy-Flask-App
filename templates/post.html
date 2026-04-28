@@ -1,13 +1,12 @@
-{% extends "base.html" %} {% block content %}
-
-<section class="page__heading">
-    <h1>{{ page_title }} Page</h1>
-    <h4 class="site__tagline">{{ site_tagline }}</h4>
-</section>
+{% extends "base.html" %} {% block content %} {% include "_page_title.html" %}
 
 <section class="page__content">
-    <a href="{{ url_for('blog') }}">← Back to all posts</a>
-    <p>{{ post.content }}</p>
-    <div class="include__nav">{% include "_main_nav.html" %}</div>
+    <a href="{{ url_for('blog') }}" class="blog__back">← Back to All Posts</a>
+    <article class="blog-posting__single">
+        <h2 class="blog-posting__title">{{ post.title }}</h2>
+        <time class="blog__date">{{ post.date }}</time>
+        <p class="blog-posting__content">{{ post.content }}</p>
+    </article>
+    {% include "_main_nav.html" %}
 </section>
 {% endblock %}

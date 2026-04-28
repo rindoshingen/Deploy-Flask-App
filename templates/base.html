@@ -12,26 +12,28 @@
         {% endblock %}
     </head>
 
-    <body class="main__container">
+    <body class="main__block">
         <header>
-            <div class="logo__wrapper">
+            <div class="logo__block">
                 <a
                     href="{{ url_for('index') }}"
                     alt="{{ site_title }}"
                     title="{{ site_title }}"
-                    ><img
+                >
+                    <img
                         class="logo"
                         src="{{ url_for('static', filename='img/logo.svg') }}"
                         alt="{{ site_title }}"
                         title="{{ site_title }}"
-                /></a>
+                    />
+                </a>
             </div>
         </header>
 
         <main id="content">{% block content %}{% endblock %}</main>
 
-        <footer class="footer__wrapper">
-            <p class="footer__copyright">
+        <footer>
+            <p class="footer__block">
                 &copy; 2026 {{ site_title }} When in Doubt, Minimize.
             </p>
         </footer>

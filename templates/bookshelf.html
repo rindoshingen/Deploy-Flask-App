@@ -1,26 +1,104 @@
-{% extends "base.html" %} {% block content %}
-
-<section class="page__heading">
-    <h1>{{ page_title }} Page</h1>
-    <h4 class="site__tagline">{{ site_tagline }}</h4>
-</section>
+{% extends "base.html" %} {% block content %} {% include "_page_title.html" %}
 
 <section class="page__content">
-    <h3 class="books__heading">My Bookshelf</h3>
-    <ul class="books__list">
-        {% for book in books %}
-        <li class="book__item">
-            <h4 class="book__item--title">{{ book.title }}</h4>
-            <ul class="book__author">
-                <li class="book__author--details">
-                    <strong>Author:</strong> {{ book.author }} /
-                    <strong>URL:</strong>
-                    <a href="{{ book.url }}" target="_blank">Buy Now</a>
-                </li>
-            </ul>
-        </li>
-        {% endfor %}
-    </ul>
-    <div class="include__nav">{% include "_main_nav.html" %}</div>
+    <div class="books__current">
+        <h3 class="books__heading">
+            <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="#9e9e9e"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="lucide lucide-minus-icon lucide-minus"
+            >
+                <path d="M5 12h14" />
+            </svg>
+            Current Reads
+        </h3>
+        <ul class="books__list">
+            {% for book in books %}
+            <li class="book__item">
+                <h4 class="book__item--title">{{ book.title }}</h4>
+                <ul class="book__author">
+                    <li class="book__author--details">
+                        <strong>Author:</strong> {{ book.author }} /
+                        <a href="{{ book.url }}" target="_blank">Buy Now</a>
+                    </li>
+                </ul>
+            </li>
+            {% endfor %}
+        </ul>
+    </div>
+
+    <div class="books__next">
+        <h3 class="books__heading">
+            <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="#9e9e9e"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="lucide lucide-minus-icon lucide-minus"
+            >
+                <path d="M5 12h14" />
+            </svg>
+            Next Reads
+        </h3>
+        <ul class="books__list">
+            {% for book in books %}
+            <li class="book__item">
+                <h4 class="book__item--title">{{ book.title }}</h4>
+                <ul class="book__author">
+                    <li class="book__author--details">
+                        <strong>Author:</strong> {{ book.author }} /
+                        <a href="{{ book.url }}" target="_blank">Buy Now</a>
+                    </li>
+                </ul>
+            </li>
+            {% endfor %}
+        </ul>
+    </div>
+
+    <div class="books__finished">
+        <h3 class="books__heading">
+            <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="#9e9e9e"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="lucide lucide-minus-icon lucide-minus"
+            >
+                <path d="M5 12h14" />
+            </svg>
+            Finished Reads
+        </h3>
+        <ul class="books__list">
+            {% for book in books %}
+            <li class="book__item">
+                <h4 class="book__item--title">{{ book.title }}</h4>
+                <ul class="book__author">
+                    <li class="book__author--details">
+                        <strong>Author:</strong> {{ book.author }} /
+                        <a href="{{ book.url }}" target="_blank">Buy Now</a>
+                    </li>
+                </ul>
+            </li>
+            {% endfor %}
+        </ul>
+    </div>
+    {% include "_main_nav.html" %}
 </section>
 {% endblock %}

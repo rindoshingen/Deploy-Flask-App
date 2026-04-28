@@ -1,13 +1,15 @@
 {% extends "base.html" %} {% block content %}
-<section class="page__heading">
-    <h1>{{ page_title }} Page</h1>
-    <h2 class="site__tagline">{{ site_tagline }}</h2>
-</section>
 
 <section class="page__content">
-    <p>
-        This is my {{ page_title }} Page for my wesbite.
+    <p class="index__tagline">
+        Making things <strong>Simple</strong>, Making things
+        <strong>Useful</strong>, Making things <strong>Impactful</strong>.
     </p>
-    <div class="include__nav">{% include "_main_nav.html" %}</div>
+    <p>
+        A data geek tinkerer who loves building things, a fan of minimalism, and
+        someone who enjoys reading, the outdoors, brewing coffee, and watching
+        movies.
+    </p>
+    {% include "_main_nav.html" %}
 </section>
 {% endblock %}
