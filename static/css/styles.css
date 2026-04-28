@@ -116,6 +116,7 @@ header {
 /* Body Styles */
 .site__tagline {
     margin-bottom: 1rem;
+    font-size: var(--fw-heading--0925);
 }
 
 .page__content {
