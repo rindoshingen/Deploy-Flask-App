@@ -37,6 +37,10 @@
     --fw-heading--1: 1rem;
     --fw-heading--0925: 0.925rem;
     --fw-heading--0825: 0.825rem;
+    --fw-heading--0725: 0.725rem;
+
+    /* Spacing */
+    --fw-space--3: 3rem;
 }
 
 /* General Styles */
@@ -49,9 +53,17 @@ body {
     -webkit-font-smoothing: antialiased;
 }
 
+.main__block {
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    width: 550px;
+    padding: 1rem 1.25rem;
+}
+
 .page__heading {
-    border-bottom: 1px solid #e0e0e0;
-    margin-block-end: 1.5rem;
+    border-bottom: 1px dashed #e0e0e0;
+    margin-bottom: var(--fw-space--3);
 
     & h1 {
         font-family: "Roboto-Condensed";
@@ -59,7 +71,7 @@ body {
         font-weight: 500;
     }
 
-    & h2 {
+    & h4 {
         font-size: var(--fw-heading--0925);
         font-weight: 400;
         color: var(--fw-color--500);
@@ -67,17 +79,14 @@ body {
 }
 
 /* Header */
-.main__container {
-    padding: 1rem 1.25rem;
-}
-
 header {
-    margin-bottom: 1.5rem;
+    padding: 5rem 0 1.5rem 0;
 }
 
-.logo__wrapper {
+.logo__block {
     width: 25px;
     height: 25px;
+    margin-bottom: var(--fw-space--3);
 
     & .logo {
         width: inherit;
@@ -85,88 +94,127 @@ header {
     }
 }
 
-.nav__wrapper {
+.nav__block {
     display: flex;
     gap: 0.25rem;
+    margin-top: 3rem;
 }
 
-.menu__wrapper {
+.menu__block {
     display: flex;
     flex-direction: column;
     padding-inline-start: 0;
     margin-block-start: 0;
     margin-block-end: 0;
     list-style: none;
+
+    & li {
+        font-size: var(--fw-heading--0925);
+    }
 }
 
 /* Body Styles */
 .site__tagline {
-    margin-block-end: 1rem;
+    margin-bottom: 1rem;
 }
 
 .page__content {
-    margin-block-end: 1rem;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1.5rem;
 }
 
-/* Includes Styles */
-.include__nav {
-    margin-block-start: 3rem;
+/* Index Styles */
+.index__tagline {
+    margin-bottom: 1rem;
 }
 
-/* Words Styling */
+/* Blog Styling */
 .blog__entry {
-    margin-block-end: 1.5rem;
-    padding-block-end: 1.5rem;
-    border-bottom: 1px solid #e0e0e0;
+    margin-bottom: 1.5rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px dashed #e0e0e0;
 
     &:last-child {
-        margin-block-end: 0;
-        padding-block-end: 0;
+        margin-bottom: 0;
+        padding-bottom: 0;
         border-bottom: 0;
+    }
+
+    & .blog__title {
+        font-family: "Roboto-Condensed";
+        font-size: var(--fw-heading--115);
+        font-weight: 500;
+    }
+
+    & .blog__date {
+        font-size: var(--fw-heading--0825);
+        color: var(--fw-color--500);
     }
 }
 
 .blog__heading {
-    margin-block-end: 1.5rem;
+    margin-bottom: 1.5rem;
     font-size: var(--fw-heading--115);
     font-weight: 500;
 }
 
-.blog__title {
-    font-size: var(--fw-heading--1);
-    font-weight: 500;
-}
-
-.blog__date {
-    font-size: var(--fw-heading--0825);
-}
-
 .blog__content {
-    margin-block-start: 0.5rem;
+    margin-top: 0.5rem;
     margin-left: 0.5rem;
     border-left: 1px dashed #e0e0e0;
     padding-left: 0.5rem;
 }
 
+.blog__back {
+    margin-bottom: 1rem;
+    font-size: var(--fw-heading--0925);
+}
+
+/* Blog Single Styles */
+.blog-posting__single {
+    & .blog-posting__title {
+        font-family: "Roboto-Condensed";
+        font-size: var(--fw-heading--125);
+        font-weight: 600;
+    }
+
+    & .blog-posting__content {
+        margin-top: 0.5rem;
+    }
+}
+
 /* Books Styling */
 .books__heading {
-    margin-block-end: 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+    margin-bottom: 1.5rem;
     font-family: "Roboto-Condensed";
-    font-size: var(--fw-heading--115);
+    font-size: var(--fw-heading--125);
     font-weight: 500;
+}
+
+.books__current,
+.books__next {
+    margin-bottom: 3rem;
+}
+
+.books__heading {
+    font-size: var(--fw-heading--0925);
 }
 
 .books__list {
     list-style: none;
 
     & li {
-        margin-block-end: 1rem;
-        padding-block-end: 1rem;
-        border-bottom: 1px solid #e0e0e0;
+        margin-bottom: 1rem;
+        padding-bottom: 1rem;
+        border-bottom: 1px dashed #e0e0e0;
 
         &:last-child {
-            margin-block-end: 0;
-            padding-block-end: 0;
+            margin-bottom: 0;
+            padding-bottom: 0;
             border-bottom: 0;
         }
     }
@@ -174,8 +222,10 @@ header {
 
 .book__item {
     & .book__item--title {
-        font-size: var(--fw-heading--1);
+        font-family: "Roboto-Condensed";
+        font-size: var(--fw-heading--115);
         font-weight: 500;
+        margin-bottom: 0.15rem;
     }
 }
 
@@ -200,11 +250,9 @@ header {
 
 /* Footer Styles */
 footer {
-    position: fixed;
-    bottom: 0;
-    margin-block-end: 1rem;
-}
+    margin-bottom: 1rem;
 
-.footer__copyright {
-    font-size: var(--fw-heading--0925);
+    & .footer__block {
+        font-size: var(--fw-heading--0825);
+    }
 }
