@@ -176,7 +176,7 @@ header {
     & .blog-posting__title {
         font-family: "Roboto-Condensed";
         font-size: var(--fw-heading--125);
-        font-weight: 600;
+        font-weight: 500;
     }
 
     & .blog-posting__content {
