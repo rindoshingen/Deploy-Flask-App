@@ -1,4 +1,4 @@
-from flask import Flask, abort, render_template, request
+from flask import Flask, abort, render_template
 
 from data import Books, Posts
 
@@ -28,15 +28,7 @@ def bookshelf():
     # Page Details
     page_title = "Bookshelf"
 
-    # Get category from query string, e.g., ?cat=Current
-    category = request.args.get('cat')
-    
-    if category:
-        bookshelf = [b for b in Books if b.get('cat') == category]
-    else:
-        bookshelf = Books  # show all
-
-    return render_template("bookshelf.html", page_title=page_title, books=Books, current_cat=category)
+    return render_template("bookshelf.html", page_title=page_title, books=Books)
 
 
 @app.route("/blog/")
