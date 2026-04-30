@@ -32,9 +32,9 @@ def bookshelf():
     category = request.args.get('cat')
     
     if category:
-        books = [b for b in Books if b.get('cat') == category]
+        bookshelf = [b for b in Books if b.get('cat') == category]
     else:
-        books = Books  # show all
+        bookshelf = Books  # show all
 
     return render_template("bookshelf.html", page_title=page_title, books=Books, current_cat=category)
 
