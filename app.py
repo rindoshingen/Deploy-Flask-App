@@ -32,11 +32,11 @@ def bookshelf():
     category = request.args.get('cat')
     
     if category:
-        filtered_books = [b for b in Books if b.get('cat') == category]
+        books = [b for b in Books if b.get('cat') == category]
     else:
-        filtered_books = Books  # show all
+        books = Books  # show all
 
-    return render_template("bookshelf.html", page_title=page_title, books=Books, books=filtered_books, current_cat=category)
+    return render_template("bookshelf.html", page_title=page_title, books=Books, current_cat=category)
 
 
 @app.route("/blog/")
