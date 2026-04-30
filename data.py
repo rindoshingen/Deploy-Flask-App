@@ -31,23 +31,27 @@ Books = [
         "title": "Book Title One",
         "author": "John Doe",
         "url": "https://goodreads.com",
+        "cat": "Current",
     },
     {
         "id": 2,
         "title": "Book Title Two",
         "author": "Jane Doe",
         "url": "https://goodreads.com",
+        "cat": "Current",
     },
     {
         "id": 3,
         "title": "Book Title Three",
         "author": "Sally Jones",
         "url": "https://goodreads.com",
+        "cat": "Next",
     },
     {
         "id": 4,
         "title": "Book Title Four",
         "author": "Dennis Lee",
         "url": "https://goodreads.com",
+        "cat": "Finished",
     },
 ]
