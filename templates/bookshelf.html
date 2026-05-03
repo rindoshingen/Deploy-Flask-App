@@ -21,6 +21,7 @@
         </h3>
         <ul class="books__list">
             {% for book in books %}
+            {% if book.category == "Current" %}
             <li class="book__item">
                 <h4 class="book__item--title">{{ book.title }}</h4>
                 <ul class="book__author">
@@ -29,7 +30,9 @@
                         <a href="{{ book.url }}" target="_blank">Buy Now</a>
                     </li>
                 </ul>
+                <span class="book__category">{{ book.category }}</span>
             </li>
+            {% endif %}
             {% endfor %}
         </ul>
     </div>
@@ -54,6 +57,7 @@
         </h3>
         <ul class="books__list">
             {% for book in books %}
+            {% if book.category == "Next" %}
             <li class="book__item">
                 <h4 class="book__item--title">{{ book.title }}</h4>
                 <ul class="book__author">
@@ -62,7 +66,9 @@
                         <a href="{{ book.url }}" target="_blank">Buy Now</a>
                     </li>
                 </ul>
+                <span class="book__category">{{ book.category }}</span>
             </li>
+            {% endif %}
             {% endfor %}
         </ul>
     </div>
@@ -87,6 +93,7 @@
         </h3>
         <ul class="books__list">
             {% for book in books %}
+            {% if book.category == "Finished" %}
             <li class="book__item">
                 <h4 class="book__item--title">{{ book.title }}</h4>
                 <ul class="book__author">
@@ -95,7 +102,9 @@
                         <a href="{{ book.url }}" target="_blank">Buy Now</a>
                     </li>
                 </ul>
+                <span class="book__category">{{ book.category }}</span>
             </li>
+            {% endif %}
             {% endfor %}
         </ul>
     </div>
