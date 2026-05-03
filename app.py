@@ -1,4 +1,4 @@
-from flask import Flask, abort, render_template, request
+from flask import Flask, abort, render_template
 
 from data import books, posts
 
