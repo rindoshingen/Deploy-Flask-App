@@ -46,4 +46,4 @@ def show_post(post_id):
     post = next((p for p in Posts if p["id"] == post_id), None)
     if post is None:
         abort(404)  # or return "Not found", 404
-    return render_template("post.html", posts=posts)
+    return render_template("post.html", post=post)
