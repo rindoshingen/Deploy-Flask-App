@@ -234,6 +234,10 @@ header {
         font-weight: 500;
         margin-bottom: 0.15rem;
     }
+
+    & .book__category {
+        font-size: var(--fw-heading--0925);
+    }
 }
 
 .book__author {
