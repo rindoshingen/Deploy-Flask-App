@@ -37,7 +37,7 @@ def blog():
     # Page Details
     page_title = "Blog"
 
-    return render_template("blog.html", page_title=page_title, posts=posts)
+    return render_template("blog.html", page_title=page_title, post=post)
 
 
 @app.route("/post/<int:post_id>")
