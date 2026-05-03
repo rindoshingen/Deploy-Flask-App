@@ -173,6 +173,10 @@ header {
     padding-left: 0.5rem;
 }
 
+.blog__category {
+    font-size: var(--fw-heading--0825);
+}
+
 .blog__back {
     margin-bottom: 1rem;
     font-size: var(--fw-heading--0925);
