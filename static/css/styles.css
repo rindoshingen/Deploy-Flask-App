@@ -236,7 +236,7 @@ header {
     }
 
     & .book__category {
-        font-size: var(--fw-heading--0925);
+        font-size: var(--fw-heading--0825);
     }
 }
 
