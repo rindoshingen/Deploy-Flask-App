@@ -37,7 +37,7 @@ def blog():
     # Page Details
     page_title = "Blog"
 
-    return render_template("blog.html", page_title=page_title, post=post)
+    return render_template("blog.html", page_title=page_title, posts=posts)
 
 
 @app.route("/post/<int:post_id>")
@@ -46,4 +46,4 @@ def show_post(post_id):
     post = next((p for p in Posts if p["id"] == post_id), None)
     if post is None:
         abort(404)  # or return "Not found", 404
-    return render_template("post.html", posts=posts)
+    return render_template("post.html", post=post)
