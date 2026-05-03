@@ -1,4 +1,4 @@
-Posts = [
+posts = [
     {
         "id": 1,
         "title": "What is with All this Snow Today!",
@@ -25,7 +25,7 @@ Posts = [
     },
 ]
 
-Books = [
+books = [
     {
         "id": 1,
         "title": "Book Title One",
