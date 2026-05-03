@@ -8,7 +8,7 @@
             <h4 class="blog__title">
                 <a href="{{ url_for('show_post', post_id=post.id) }}">{{ post.title }}</a>
             </h4>
-            <time class="blog__date">{{ post.date }}</time>
+            <time class="blog__date">{{ post.date }}</time> / 
             <span class="blog__category"><strong>Category:</strong> {{ post.category }}</span>
         </li>
         {% endfor %}
