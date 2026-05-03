@@ -157,6 +157,10 @@ header {
     & .blog__date {
         font-size: var(--fw-heading--0825);
         color: var(--fw-color--500);
+
+        & strong {
+            color: var(--fw-color--900);
+        }
     }
 }
 
@@ -176,6 +180,10 @@ header {
 .blog__category {
     font-size: var(--fw-heading--0825);
     color: var(--fw-color--500);
+
+    & strong {
+        color: var(--fw-color--900);
+    }
 }
 
 .blog__back {
