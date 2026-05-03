@@ -175,6 +175,7 @@ header {
 
 .blog__category {
     font-size: var(--fw-heading--0825);
+    color: var(--fw-color--500);
 }
 
 .blog__back {
