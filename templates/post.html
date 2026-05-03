@@ -5,6 +5,7 @@
     <article class="blog-posting__single">
         <h2 class="blog-posting__title">{{ post.title }}</h2>
         <time class="blog__date">{{ post.date }}</time>
+        <span class="blog__category"><strong>Category:</strong> {{ post.category }}</span>
         <p class="blog-posting__content">{{ post.content }}</p>
     </article>
     {% include "_main_nav.html" %}
