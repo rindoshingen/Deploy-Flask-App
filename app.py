@@ -1,6 +1,6 @@
 from flask import Flask, abort, render_template
 
-from data import Books, Posts
+from data import books, posts
 
 app = Flask(__name__)
 
@@ -28,7 +28,7 @@ def bookshelf():
     # Page Details
     page_title = "Bookshelf"
 
-    return render_template("bookshelf.html", page_title=page_title, books=Books)
+    return render_template("bookshelf.html", page_title=page_title, books=books)
 
 
 @app.route("/blog/")
@@ -37,7 +37,7 @@ def blog():
     # Page Details
     page_title = "Blog"
 
-    return render_template("blog.html", page_title=page_title, posts=Posts)
+    return render_template("blog.html", page_title=page_title, posts=posts)
 
 
 @app.route("/post/<int:post_id>")
