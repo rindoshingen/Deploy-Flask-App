@@ -111,6 +111,15 @@ header {
     & li {
         font-size: var(--fw-heading--0925);
     }
+
+    & .nav__link {
+        color: var(--fw-color--500);
+    }
+
+    & .nav__link--active {
+        font-weight: 600;
+        color: var(--fw-color--900);
+    }
 }
 
 /* Body Styles */
