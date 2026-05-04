@@ -4,7 +4,8 @@
     <a href="{{ url_for('blog') }}" class="blog__back">← Back to All Posts</a>
     <article class="blog-posting__single">
         <h2 class="blog-posting__title">{{ post.title }}</h2>
-        <time class="blog__date">{{ post.date }}</time>
+        <time class="blog__date"><strong>Posted:</strong> {{ post.date }}</time> / 
+        <span class="blog__category"><strong>In:</strong> {{ post.category }}</span>
         <p class="blog-posting__content">{{ post.content }}</p>
     </article>
     {% include "_main_nav.html" %}
