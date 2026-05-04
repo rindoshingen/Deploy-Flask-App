@@ -153,15 +153,6 @@ header {
         font-size: var(--fw-heading--115);
         font-weight: 500;
     }
-
-    & .blog__date {
-        font-size: var(--fw-heading--0825);
-        color: var(--fw-color--500);
-
-        & strong {
-            color: var(--fw-color--900);
-        }
-    }
 }
 
 .blog__heading {
@@ -178,6 +169,15 @@ header {
 }
 
 .blog__category {
+    font-size: var(--fw-heading--0825);
+    color: var(--fw-color--500);
+
+    & strong {
+        color: var(--fw-color--900);
+    }
+}
+
+.blog__date {
     font-size: var(--fw-heading--0825);
     color: var(--fw-color--500);
 
