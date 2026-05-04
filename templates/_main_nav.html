@@ -1,9 +1,19 @@
 <nav class="nav__block">
     <ul class="menu__block">
-        <li><a href="{{ url_for('index') }}" title="Index">Index</a></li>
         <li>
-            <a href="{{ url_for('bookshelf') }}" title="Bookshelf">Bookshelf</a>
+            <a href="{{ url_for('index') }}" 
+                title="Index"
+                class="nav__link {{ 'nav__link--active' if request.path == url_for('index') }}">Index</a>
         </li>
-        <li><a href="{{ url_for('blog') }}" title="Blog">Blog</a></li>
+        <li>
+            <a href="{{ url_for('bookshelf') }}" 
+                title="Bookshelf"
+                class="nav__link {{ 'nav__link--active' if request.path == url_for('bookshelf') }}">Bookshelf</a>
+        </li>
+        <li>
+            <a href="{{ url_for('blog') }}" 
+                title="Blog"
+                class="nav__link {{ 'nav__link--active' if request.path == url_for('blog') }}">Blog</a>
+        </li>
     </ul>
 </nav>
