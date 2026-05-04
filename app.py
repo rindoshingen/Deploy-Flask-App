@@ -43,7 +43,7 @@ def blog():
 @app.route("/post/<int:post_id>")
 def show_post(post_id):
     # Find the post with matching id
-    post = next((p for p in Posts if p["id"] == post_id), None)
+    post = next((p for p in posts if p["id"] == post_id), None)
     if post is None:
         abort(404)  # or return "Not found", 404
     return render_template("post.html", post=post)
